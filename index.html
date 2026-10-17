@@ -1,58 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conexus — Hub de Estudos</title>
-  <link rel="stylesheet" href="estilo/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#070A14">
+    <meta name="description" content="Explore filosofia, sociologia, física e matemática no Conexus.">
+    <title>Conexus · conhecimento conectado</title>
+    <link rel="icon" href="src/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="src/css/global.css">
+    <link rel="stylesheet" href="src/css/componente.css">
 </head>
-<body>
-  <header>
-    <h1 class="titulo-pagina">CONEXUS</h1>
-    <p class="subtitulo">Hub de estudos</p>
-  </header>
+<body data-root="" data-page="home">
+    <div class="app">
+        <div data-include="header"></div>
+        <main>
+            <section class="hero">
+                <div class="hero-conteudo">
+                    <span class="hero-eyebrow">Arquivo vivo do conhecimento</span>
+                    <h1>Ideia que inspira, saber que se <em>conecta</em>.</h1>
+                    <p>Um espaço de leitura para explorar uma pergunta de cada vez, em filosofia, sociologia, física e matemática.</p>
+                    <div class="hero-acao">
+                        <a class="botao-primario" href="#materia">Explorar matéria</a>
+                        <a class="botao-secundario" href="#artigo-destaque">Ler artigo em destaque</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="orbita">
+                        <div class="orbita-anel"><span class="orbita-ponto"></span></div>
+                        <div class="orbita-anel"></div>
+                        <div class="orbita-anel"></div>
+                        <div class="orbita-centro">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                                <circle cx="12" cy="12" r="4"></circle>
+                                <path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.93 4.93l2.12 2.12m9.9 9.9 2.12 2.12m0-14.14-2.12 2.12m-9.9 9.9-2.12 2.12"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-  <main>
-    <section class="intro">
-      <h2>Bem-vindo ao seu hub de conhecimento</h2>
-      <p>Explore conteúdos organizados por área. Simples, direto e sempre em expansão.</p>
-    </section>
+            <section class="secao" id="materia" aria-labelledby="titulo-materia">
+                <div class="cabecalho-secao">
+                    <div>
+                        <h2 id="titulo-materia">Explore uma <em>matéria</em></h2>
+                        <p>Escolha um campo e siga o fio de uma ideia.</p>
+                    </div>
+                </div>
+                <div class="grade-card">
+                    <a class="card" data-card href="material/filosofia/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"></circle><path d="M8 9a4 4 0 1 1 6.5 3.1c-1.3 1-2.5 1.4-2.5 3.4m0 3v.1"></path></svg></span>
+                        <h3>Filosofia</h3>
+                        <p>Uma investigação sobre realidade, pensamento e existência.</p>
+                        <span class="card-rodape"><span class="card-tag">Reflexão</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="card" data-card href="material/sociologia/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3.5 19a5.5 5.5 0 0 1 11 0m1-4a4 4 0 0 1 5 4"></path></svg></span>
+                        <h3>Sociologia</h3>
+                        <p>Um olhar sobre relação social, cultura e vida em grupo.</p>
+                        <span class="card-rodape"><span class="card-tag">Sociedade</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="card" data-card href="material/fisica/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2"></circle><ellipse cx="12" cy="12" rx="10" ry="4.5"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"></ellipse></svg></span>
+                        <h3>Física</h3>
+                        <p>Uma leitura da matéria, do movimento e da energia.</p>
+                        <span class="card-rodape"><span class="card-tag">Natureza</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="card" data-card href="material/matematica/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h14M5 12h14M5 20h14M8 2v4m8 4v4m-8 4v4"></path></svg></span>
+                        <h3>Matemática</h3>
+                        <p>Uma linguagem para reconhecer padrão e relação.</p>
+                        <span class="card-rodape"><span class="card-tag">Raciocínio</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </section>
 
-    <nav id="nav" class="grade">
-      <a class="cartao-navegacao" href="src/leitura/index.html">
-        <span class="icone">📚</span>
-        <span class="titulo">Leitura</span>
-        <span class="descricao">Artigos e resumos</span>
-      </a>
-
-      <a class="cartao-navegacao" href="src/leitura/historia/index.html">
-        <span class="icone">🏛️</span>
-        <span class="titulo">História</span>
-        <span class="descricao">Da pré-história aos dias atuais</span>
-      </a>
-
-      <a class="cartao-navegacao" href="src/leitura/biologia/index.html">
-        <span class="icone">🧬</span>
-        <span class="titulo">Biologia</span>
-        <span class="descricao">Vida e ciências naturais</span>
-      </a>
-
-      <a class="cartao-navegacao" href="src/code/index.html">
-        <span class="icone">💻</span>
-        <span class="titulo">Código</span>
-        <span class="descricao">Programação e lógica</span>
-      </a>
-
-      <a class="cartao-navegacao" href="src/teste/index.html">
-        <span class="icone">🧪</span>
-        <span class="titulo">Testes</span>
-        <span class="descricao">Exercícios e quizzes</span>
-      </a>
-    </nav>
-  </main>
-
-  <footer>
-    <p class="texto">&copy; 2025 Conexus — Conhecimento conectado</p>
-  </footer>
+            <section class="secao" id="artigo-destaque" aria-labelledby="titulo-destaque">
+                <div class="cabecalho-secao">
+                    <div>
+                        <h2 id="titulo-destaque">Artigo em destaque</h2>
+                        <p>Uma pergunta antiga sobre o que existe.</p>
+                    </div>
+                    <a class="link-secao" href="material/filosofia/01-filosofia-primal.html">Ler artigo →</a>
+                </div>
+                <a class="card" data-card href="material/filosofia/01-filosofia-primal.html">
+                    <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+                    <h3>Metafísica: <em>o que existe</em>, afinal?</h3>
+                    <p>Uma introdução à investigação filosófica sobre a estrutura da realidade.</p>
+                    <span class="card-rodape"><span class="card-tag">Filosofia · leitura breve</span><span class="card-seta" aria-hidden="true">→</span></span>
+                </a>
+            </section>
+        </main>
+        <div data-include="footer"></div>
+    </div>
+    <script src="src/js/cabecalho.js"></script>
+    <script src="src/js/rodape.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/navegacao.js"></script>
 </body>
 </html>
