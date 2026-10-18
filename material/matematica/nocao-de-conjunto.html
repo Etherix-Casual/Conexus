@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#070A14">
+    <meta name="description" content="A ferramenta que organiza a matemática: entenda o que é conjunto, pertinência, inclusão e as operações entre conjuntos.">
+    <title>Noção de conjunto · Conexus</title>
+    <link rel="icon" href="../../src/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../src/css/global.css">
+    <link rel="stylesheet" href="../../src/css/componente.css">
+    <link rel="stylesheet" href="../../src/css/artigo.css">
+</head>
+<body data-root="../../" data-page="artigo" data-materia="matematica" data-artigo="nocao-de-conjunto">
+    <div class="app">
+        <div data-include="header"></div>
+        <main>
+            <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="../../index.html">Início</a><span aria-hidden="true">›</span><a href="../index.html">Matéria</a><span aria-hidden="true">›</span><a href="./index.html">Matemática</a><span aria-hidden="true">›</span><span>Noção de conjunto</span></nav>
+            <article class="article">
+                <div class="article-meta"><span class="tag">Matemática</span><span class="ponto" aria-hidden="true">·</span><span>Leitura de 9 min</span><span class="ponto" aria-hidden="true">·</span><span>Atualizado em outubro de 2026</span></div>
+                <h2>Noção de <em>conjunto</em></h2>
+                <p class="lede">Antes de classificar número, a matemática precisa de uma ferramenta para agrupar objetos. Essa ferramenta é o conjunto — e ela sustenta praticamente tudo o que vem depois.</p>
+                <div class="article-body">
+                    <div class="prose">
+                        <p>A palavra <strong>conjunto</strong> aparece em quase todo enunciado matemático. "O conjunto dos números pares", "o conjunto das soluções de uma equação", "o conjunto vazio". A ideia é tão básica que costuma passar sem definição — mas ela tem história, regras e um papel central. Este artigo apresenta a noção de conjunto, a notação que a acompanha e as operações que se pode fazer com ela, para que o artigo seguinte, sobre conjunto numérico, tenha terreno firme.</p>
+
+                        <h3>O que é um conjunto</h3>
+                        <p>Um <strong>conjunto</strong> é uma coleção de objetos, tratada como um todo. Os objetos que compõem o conjunto são chamados de <strong>elementos</strong>. Um conjunto pode ser finito, como o conjunto das vogais {a, e, i, o, u}, ou infinito, como o conjunto dos números naturais {0, 1, 2, 3, …}. Pode ter um único elemento, como {7}, e pode não ter nenhum, o que se chama de <strong>conjunto vazio</strong>.</p>
+                        <p>Duas características definem um conjunto. Primeiro, a <strong>ordem dos elementos não importa</strong>: o conjunto {a, b, c} é o mesmo que {c, a, b}. Isso distingue conjunto de sequência — em uma sequência, "primeiro, segundo, terceiro" importa; em um conjunto, não. Segundo, a <strong>repetição não importa</strong>: o conjunto {1, 2, 2, 3} é o mesmo que {1, 2, 3}. Cada elemento é contado uma única vez, seja qual for o número de vezes que aparece na escrita.</p>
+                        <p>Essa definição intuitiva foi formulada por Georg Cantor no fim do século XIX. Ele a apresentou assim: "conjunto é uma coleção, em um todo, de objetos definidos e distintos da nossa intuição ou do nosso pensamento". A formulação é vaga, e Cantor sabia disso. Mais tarde, a teoria precisou ser formalizada por axiomas — assunto que foge do escopo deste artigo, mas que vale saber que existe.</p>
+
+                        <h3>Pertinência: o que está dentro</h3>
+                        <p>A relação mais básica da teoria dos conjuntos é a <strong>pertinência</strong>. Diz-se que um objeto <em class="hl">pertence</em> a um conjunto quando ele é um dos seus elementos. O símbolo é <strong>∈</strong>. Escreve-se <em>a</em> ∈ <em>A</em> para dizer "o elemento <em>a</em> pertence ao conjunto <em>A</em>". A negação é <strong>∉</strong>: <em>a</em> ∉ <em>A</em> significa "o elemento <em>a</em> não pertence ao conjunto <em>A</em>".</p>
+                        <p>Exemplos: 5 ∈ {1, 3, 5, 7}; 4 ∉ {1, 3, 5, 7}; 'a' ∈ {a, e, i, o, u}; 'b' ∉ {a, e, i, o, u}. A relação é binária: sempre se pergunta se um elemento específico pertence a um conjunto específico. Não existe meio-termo — ou pertence, ou não pertence.</p>
+
+                        <h3>Como descrever um conjunto</h3>
+                        <p>Há duas formas de descrever um conjunto, e a escolha entre elas depende do tamanho e da natureza do conjunto.</p>
+                        <p>A primeira é a <strong>enumeração</strong>, ou descrição por extensão: listar os elementos entre chaves. {1, 2, 3}, {a, e, i, o, u}, {azul, verde, amarelo}. Funciona bem para conjuntos pequenos. Para conjuntos grandes ou infinitos, usa-se reticências para indicar continuação: {1, 2, 3, …, 100} ou {2, 4, 6, 8, …}. As reticências sempre exigem que o padrão esteja claro; se não estiver, a notação perde precisão.</p>
+                        <p>A segunda é a <strong>descrição por propriedade</strong>, ou compreensão: declarar a regra que define quais objetos pertencem ao conjunto. Escreve-se {x | P(x)}, lendo-se "o conjunto dos <em>x</em> tais que <em>P(x)</em>". Por exemplo: {x | x é par} é o conjunto dos números pares. {x ∈ ℕ | x > 5} é o conjunto dos números naturais maiores que 5. Essa forma é mais poderosa, porque descreve conjuntos infinitos sem ambiguidade.</p>
+                        <p>As duas descrições podem representar o mesmo conjunto. {2, 4, 6, 8, …} e {x ∈ ℕ | x é par e x > 0} são a mesma coisa escrita de duas formas.</p>
+
+                        <h3>Conjunto vazio e conjunto unitário</h3>
+                        <p>Dois casos especiais merecem nome próprio. O <strong>conjunto vazio</strong>, indicado por <strong>∅</strong> ou por { }, é o conjunto que não tem nenhum elemento. Não confundir com {∅}, que é o conjunto que contém o conjunto vazio — este tem um elemento, o conjunto vazio. A distinção parece boba, mas é importante: ∅ tem zero elementos; {∅} tem um elemento.</p>
+                        <p>O <strong>conjunto unitário</strong> é aquele com um único elemento. {7} é unitário. {∅} também é unitário. Todo conjunto unitário tem exatamente um elemento, embora esse elemento possa ser, ele mesmo, um conjunto.</p>
+
+                        <h3>Inclusão: quando um conjunto está dentro de outro</h3>
+                        <p>Há uma segunda relação fundamental, distinta da pertinência. Diz-se que um conjunto <em>A</em> é <strong>subconjunto</strong> de um conjunto <em>B</em> quando todo elemento de <em>A</em> também é elemento de <em>B</em>. Escreve-se <strong>A ⊂ B</strong> e lê-se "<em>A</em> está contido em <em>B</em>". A relação inversa é <strong>B ⊃ A</strong>, "<em>B</em> contém <em>A</em>".</p>
+                        <p>Exemplos: {1, 3} ⊂ {1, 2, 3, 4}; o conjunto das vogais está contido no conjunto das letras; ℕ ⊂ ℤ, porque todo número natural é também número inteiro. Quando <em>A</em> está contido em <em>B</em> mas <em>A</em> ≠ <em>B</em>, diz-se que é <strong>subconjunto próprio</strong>, e às vezes se usa o símbolo ⊊.</p>
+                        <p>Duas confusões comuns valem ser desfeitas desde já. Primeira: <strong>pertinência não é inclusão</strong>. <em>a</em> ∈ <em>A</em> compara um <em>elemento</em> com um <em>conjunto</em>. <em>A</em> ⊂ <em>B</em> compara um <em>conjunto</em> com outro <em>conjunto</em>. São relações diferentes, com símbolos diferentes. Segunda: todo conjunto é subconjunto de si mesmo. <em>A</em> ⊂ <em>A</em> é sempre verdade. E o conjunto vazio é subconjunto de qualquer conjunto, inclusive de si mesmo: ∅ ⊂ <em>A</em>, para todo <em>A</em>.</p>
+
+                        <h3>Conjunto das partes</h3>
+                        <p>A partir de um conjunto <em>A</em>, pode-se construir um novo conjunto: o <strong>conjunto das partes</strong>, também chamado de <strong>conjunto potência</strong>, indicado por ℘(<em>A</em>) ou 2<em>^A</em>. Ele reúne todos os subconjuntos de <em>A</em>, incluindo o vazio e o próprio <em>A</em>.</p>
+                        <p>Exemplo: se <em>A</em> = {1, 2}, então ℘(<em>A</em>) = {∅, {1}, {2}, {1, 2}}. O conjunto tem 2 elementos; o conjunto das partes tem 4. Isso não é coincidência: se <em>A</em> tem <em>n</em> elementos, ℘(<em>A</em>) tem 2<em>^n</em> elementos. A razão é que cada elemento de <em>A</em> pode ou não aparecer em um subconjunto — são duas escolhas por elemento, o que gera 2 × 2 × … × 2, <em>n</em> vezes.</p>
+
+                        <h3>Operações entre conjuntos</h3>
+                        <p>Conjuntos podem ser combinados de três formas principais.</p>
+                        <p>A <strong>união</strong> de dois conjuntos, indicada por <strong>A ∪ B</strong>, é o conjunto formado pelos elementos que pertencem a <em>A</em>, ou a <em>B</em>, ou a ambos. Exemplo: {1, 2, 3} ∪ {3, 4, 5} = {1, 2, 3, 4, 5}. A união nunca repete elementos.</p>
+                        <p>A <strong>interseção</strong>, indicada por <strong>A ∩ B</strong>, é o conjunto dos elementos que pertencem simultaneamente a <em>A</em> e a <em>B</em>. Exemplo: {1, 2, 3} ∩ {3, 4, 5} = {3}. Quando a interseção é vazia, diz-se que os conjuntos são <strong>disjuntos</strong>: {1, 2} ∩ {3, 4} = ∅.</p>
+                        <p>A <strong>diferença</strong>, indicada por <strong>A − B</strong> ou <strong>A \ B</strong>, é o conjunto dos elementos que pertencem a <em>A</em> mas não pertencem a <em>B</em>. Exemplo: {1, 2, 3} − {2, 3, 4} = {1}. A diferença não é comutativa: <em>A</em> − <em>B</em> em geral não é igual a <em>B</em> − <em>A</em>.</p>
+                        <p>Há ainda o <strong>complemento</strong>, que só faz sentido quando se fixa um conjunto universo <em>U</em> contendo todos os objetos em discussão. O complemento de <em>A</em> em relação a <em>U</em> é o conjunto dos elementos de <em>U</em> que não estão em <em>A</em>: <em>A</em><sup>c</sup> = <em>U</em> − <em>A</em>. Sem universo declarado, o complemento não está bem definido.</p>
+
+                        <h3>Diagramas de Venn</h3>
+                        <p>Para visualizar conjuntos e suas operações, costuma-se usar o <strong>diagrama de Venn</strong>, inventado por John Venn no século XIX. Cada conjunto é representado por um círculo (ou outra figura fechada) dentro de um retângulo que representa o universo. A região interna ao círculo representa os elementos do conjunto; a externa, os que não pertencem a ele.</p>
+                        <p>A união aparece como toda a área coberta pelos círculos. A interseção, como a área comum a dois círculos. A diferença, como a área de um círculo fora do outro. O diagrama não substitui a prova, mas ajuda a intuição e é útil para checar se uma igualdade entre conjuntos é plausível antes de tentar demonstrá-la.</p>
+
+                        <h3>O limite da intuição</h3>
+                        <p>A definição intuitiva de Cantor — "coleção de objetos" — funcionou bem por algumas décadas, mas teve um problema. Em 1901, Bertrand Russell mostrou que, se qualquer coleção pode ser um conjunto, então o conjunto de todos os conjuntos que não contêm a si mesmos leva a uma contradição. Se ele contém a si mesmo, então não deveria conter; se não contém, então deveria conter.</p>
+                        <blockquote>Definir por intuição funciona até o momento em que a intuição se contradiz.</blockquote>
+                        <p>Esse é o <strong>paradoxo de Russell</strong>, mencionado também no artigo anterior. A solução foi abandonar a definição ingênua e substituí-la por uma axiomática, a mais conhecida sendo a <strong>ZFC</strong> — Zermelo-Fraenkel com axioma da escolha. Na ZFC, nem toda coleção é conjunto: só as que se pode construir a partir dos axiomas. A intuição continua útil para o uso cotidiano, mas a matemática rigorosa se apoia nos axiomas.</p>
+                        <p>Para o que este site propõe, a intuição basta. As regras que você viu aqui — pertinência, inclusão, união, interseção, diferença — funcionam bem para descrever os conjuntos numéricos que vêm a seguir.</p>
+
+                        <h3>Ponte para o conjunto numérico</h3>
+                        <p>Com a noção de conjunto e a relação de inclusão, o artigo seguinte ganha sentido imediato. Dizer que ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ é aplicar exatamente o que foi visto aqui: cada conjunto numérico é subconjunto do seguinte. A classificação de número nada mais é do que a organização desses conjuntos e das operações que cada um permite.</p>
+                        <p>É esse o assunto do próximo artigo: <a class="link-secao" href="./conjunto-numerico.html">conjunto numérico</a> — a classificação que organiza cada tipo de número conforme a operação que ele permite realizar.</p>
+                    </div>
+                </div>
+                <div class="article-actions">
+                    <button class="botao-acao" id="botao-compartilhar" type="button" aria-label="Compartilhar artigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4m0-11-6.8 4"></path></svg><span data-rotulo-compartilhar>Compartilhar</span></button>
+                </div>
+                <nav class="article-proximo" aria-label="Próximo artigo">
+                    <a class="link-secao" href="./conjunto-numerico.html">Próximo: Conjunto numérico →</a>
+                </nav>
+            </article>
+        </main>
+        <div data-include="footer"></div>
+    </div>
+    <script src="../../src/js/cabecalho.js"></script><script src="../../src/js/rodape.js"></script><script src="../../src/js/main.js"></script><script src="../../src/js/navegacao.js"></script>
+</body>
+</html>

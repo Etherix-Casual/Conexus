@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#070A14">
-    <meta name="description" content="Uma introdução à ideia por trás da operação aritmética.">
+    <meta name="description" content="Adição, subtração, multiplicação e divisão: o que cada operação significa, quais propriedades ela tem e por que uma exige um conjunto numérico maior que a anterior.">
     <title>Operação básica · Conexus</title>
     <link rel="icon" href="../../src/img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../../src/css/global.css">
@@ -14,24 +14,52 @@
 <body data-root="../../" data-page="artigo" data-materia="matematica" data-artigo="operacao-basica">
     <div class="app">
         <div data-include="header"></div>
-        <main class="app">
+        <main>
             <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="../../index.html">Início</a><span aria-hidden="true">›</span><a href="../index.html">Matéria</a><span aria-hidden="true">›</span><a href="./index.html">Matemática</a><span aria-hidden="true">›</span><span>Operação básica</span></nav>
             <article class="article">
-                <div class="article-meta"><span class="tag">Matemática</span><span class="ponto" aria-hidden="true">·</span><span>Leitura de 3 min</span><span class="ponto" aria-hidden="true">·</span><span>Atualizado em outubro de 2026</span></div>
+                <div class="article-meta"><span class="tag">Matemática</span><span class="ponto" aria-hidden="true">·</span><span>Leitura de 9 min</span><span class="ponto" aria-hidden="true">·</span><span>Atualizado em outubro de 2026</span></div>
                 <h2>Operação <em>básica</em></h2>
-                <p class="lede">Cada operação representa uma forma de relacionar quantidade.</p>
+                <p class="lede">Adição, subtração, multiplicação e divisão não são apenas quatro contas. São quatro formas distintas de relacionar quantidade — e cada uma tem regras próprias que a outra não obedece.</p>
                 <div class="article-body">
                     <div class="prose">
-                        <p>A <strong>adição</strong> reúne quantidade. A subtração compara valor ou retira uma parte. A multiplicação representa a adição repetida de uma parcela, enquanto a divisão mede a razão entre uma quantidade e outra.</p>
-                        <p>A operação inversa ajuda a verificar cálculo: a divisão desfaz a multiplicação, assim como a subtração desfaz a adição. Essa relação também ajuda a encontrar um valor desconhecido.</p>
-                        <blockquote>Uma operação ganha sentido quando se entende a relação que ela representa.</blockquote>
-                        <p>Antes de aplicar uma regra, vale identificar a <em class="hl">situação matemática</em>: há reunião, comparação, repetição ou partilha?</p>
+                        <p>Uma operação é uma regra que associa dois números a um terceiro. A definição parece seca, mas esconde algo importante: nem toda regra vale para toda operação. A adição e a multiplicação podem ser feitas em qualquer ordem sem alterar o resultado. A subtração e a divisão, não. Entender por que umas obedecem a certas propriedades e outras não é o que separa a aritmética da simples memorização de tabuada.</p>
+
+                        <h3>Adição: reunir quantidades</h3>
+                        <p>A <strong>adição</strong> é a operação mais básica da aritmética. Ela reúne duas quantidades em uma só. Na reta numérica, somar significa deslocar-se para a direita: 3 + 2 = 5 porque, partindo do 3 e avançando 2 casas, chega-se ao 5.</p>
+                        <p>Formalmente, a adição nos números naturais é definida por recursão, a partir da noção de sucessor. Para todo natural <em>a</em> e todo natural <em>b</em>: <strong>a + 0 = a</strong> e <strong>a + S(b) = S(a + b)</strong>, em que S é a função sucessor. O primeiro caso diz que somar zero não altera nada. O segundo diz que somar o sucessor de <em>b</em> é o mesmo que somar <em>b</em> e depois tomar o sucessor. A partir dessas duas regras, toda a adição dos naturais pode ser construída — 3 + 2 é calculado como S(3 + 1), que é S(S(3 + 0)), que é S(S(3)), que é 5.</p>
+                        <p>A adição tem três propriedades fundamentais. A <strong>comutatividade</strong> diz que a ordem não altera a soma: <em>a + b = b + a</em>. A <strong>associatividade</strong> diz que o agrupamento não altera a soma: <em>(a + b) + c = a + (b + c)</em>. O <strong>elemento neutro</strong> diz que existe um número que não altera a soma: o zero, pois <em>a + 0 = a</em>. Há ainda o <strong>oposto aditivo</strong>: para cada <em>a</em>, existe −<em>a</em> tal que <em>a + (−a) = 0</em>.</p>
+
+                        <h3>Subtração: desfazer a adição</h3>
+                        <p>A <strong>subtração</strong> é a operação inversa da adição. Ela responde à pergunta: "que número, somado ao subtraendo, dá o minuendo?". Em símbolos, <em>a − b = c</em> quando <em>c + b = a</em>. Na reta numérica, subtrair significa deslocar-se para a esquerda.</p>
+                        <p>A subtração herda a ligação com a adição, mas <strong>não herda as propriedades</strong>. Ela não é comutativa: 5 − 3 = 2, mas 3 − 5 = −2. Também não é associativa: (5 − 3) − 2 = 0, mas 5 − (3 − 2) = 4. Essas duas diferenças não são detalhes: são a razão pela qual a subtração precisa de um conjunto numérico maior para funcionar sem restrição.</p>
+                        <p>Nos números naturais, a subtração só está definida quando o minuendo é maior ou igual ao subtraendo. 3 − 5 não tem resposta em ℕ. A solução é ampliar o conjunto para os inteiros ℤ, que incluem os negativos. Com ℤ, toda subtração tem resposta.</p>
+                        <blockquote>Subtrair é desfazer o que a adição fez. Por isso, onde a adição nunca erra, a subtração às vezes não tem para onde ir.</blockquote>
+
+                        <h3>Multiplicação: repetir a adição</h3>
+                        <p>A <strong>multiplicação</strong> é uma adição repetida. Multiplicar 4 por 3 é somar 4 três vezes: 4 + 4 + 4 = 12. Formalmente, também é definida por recursão: <strong>a × 0 = 0</strong> e <strong>a × S(b) = (a × b) + a</strong>. O primeiro caso diz que multiplicar por zero dá zero. O segundo diz que multiplicar pelo sucessor de <em>b</em> é o mesmo que multiplicar por <em>b</em> e somar <em>a</em>.</p>
+                        <p>A multiplicação tem as mesmas três propriedades da adição: comutatividade (<em>a × b = b × a</em>), associatividade (<em>(a × b) × c = a × (b × c)</em>) e elemento neutro — que é o um, não o zero, pois <em>a × 1 = a</em>. Além disso, tem uma propriedade que a adição não tem: a <strong>distributividade</strong> em relação à adição. <em>a × (b + c) = (a × b) + (a × c)</em>. É essa propriedade que conecta as duas operações e permite reescrever expressões algébricas.</p>
+                        <p>Nos naturais, a multiplicação é fechada: o produto de dois naturais é sempre natural. Mas nem toda multiplicação tem inversa nos naturais. 12 ÷ 3 = 4 é natural, mas 1 ÷ 3 não é. A inversa da multiplicação exige outro conjunto.</p>
+
+                        <h3>Divisão: desfazer a multiplicação</h3>
+                        <p>A <strong>divisão</strong> é a operação inversa da multiplicação. Ela responde à pergunta: "que número, multiplicado pelo divisor, dá o dividendo?". Em símbolos, <em>a ÷ b = c</em> quando <em>c × b = a</em>, com <em>b ≠ 0</em>. Há duas leituras possíveis: a divisão como partilha (repartir igualmente) e a divisão como medida (quantas vezes um número cabe em outro). As duas chegam ao mesmo resultado.</p>
+                        <p>Como a subtração, a divisão não é comutativa nem associativa. 12 ÷ 3 = 4, mas 3 ÷ 12 = 0,25. E (12 ÷ 3) ÷ 2 = 2, enquanto 12 ÷ (3 ÷ 2) = 8. A divisão por zero não está definida: não existe número que, multiplicado por zero, dê um número diferente de zero; e 0 ÷ 0 seria qualquer número, o que torna a operação indeterminada.</p>
+                        <p>Nos inteiros, a divisão nem sempre tem resposta. 1 ÷ 3 não é inteiro. A solução é ampliar o conjunto para os racionais ℚ, que admitem toda fração entre inteiros, com denominador diferente de zero. Com ℚ, toda divisão (exceto por zero) tem resposta.</p>
+
+                        <h3>Operações inversas e a hierarquia</h3>
+                        <p>Adição e subtração formam um par de operações inversas: uma desfaz a outra. Multiplicação e divisão formam outro par. Essa relação não é apenas simetria: é o que permite resolver equações. Para encontrar o valor de <em>x</em> em <em>x + 5 = 12</em>, subtrai-se 5 dos dois lados. Para encontrar <em>x</em> em <em>3x = 12</em>, divide-se os dois lados por 3.</p>
+                        <p>Há também uma hierarquia. A multiplicação é adição repetida; a potenciação é multiplicação repetida. Cada operação nova é uma repetição da anterior, e cada uma exige um conjunto numérico maior para funcionar sem restrição. A adição vive nos naturais. A subtração exige os inteiros. A divisão exige os racionais. A radiciação de números negativos exige os complexos.</p>
+
+                        <h3>Por que as propriedades importam</h3>
+                        <p>Pode parecer que comutatividade e associatividade são detalhes técnicos. Mas elas determinam o que se pode fazer com uma expressão. Se a operação é comutativa, a ordem dos termos não importa. Se é associativa, os parênteses podem ser reorganizados. Se é distributiva, um fator pode ser distribuído sobre uma soma. Sem essas propriedades, a álgebra não funcionaria: não seria possível simplificar <em>2(x + 3)</em> para <em>2x + 6</em>, nem reorganizar uma soma para agrupar termos semelhantes.</p>
+                        <p>Além disso, as propriedades são o critério que distingue uma operação de outra. A subtração e a divisão não são "adição e multiplicação ao contrário" apenas: são operações com regras próprias, que não podem ser tratadas como se fossem as mesmas. Reconhecer isso é o que evita erros como achar que <em>a − b = b − a</em> ou que <em>a ÷ b = b ÷ a</em>.</p>
                     </div>
-                    <aside class="aside-card"><h4>Conceito-chave</h4><ul><li>Adição: reunião de quantidade.</li><li>Subtração: diferença ou retirada.</li><li>Multiplicação: repetição de parcela.</li><li>Divisão: partilha ou medida.</li></ul></aside>
                 </div>
                 <div class="article-actions">
                     <button class="botao-acao" id="botao-compartilhar" type="button" aria-label="Compartilhar artigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="m8.6 13.5 6.8 4m0-11-6.8 4"></path></svg><span data-rotulo-compartilhar>Compartilhar</span></button>
                 </div>
+                <nav class="article-proximo" aria-label="Próximo artigo">
+                    <a class="link-secao" href="./index.html">Voltar: Matemática →</a>
+                </nav>
             </article>
         </main>
         <div data-include="footer"></div>
