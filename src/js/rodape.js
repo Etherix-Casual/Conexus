@@ -12,8 +12,9 @@
                 <p>Um espaço para conectar ideia e conhecimento.</p>
             </div>
             <nav class="footer-link" aria-label="Navegação de rodapé">
-                <a href="${raiz}material/filosofia/index.html">Matéria</a>
+                <a href="${raiz}material/index.html">Matéria</a>
                 <a href="${raiz}sobre/index.html">Sobre</a>
+                <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>
                 <a href="https://github.com/Etherix-Casual/Conexus" target="_blank" rel="noopener noreferrer">GitHub</a>
             </nav>
             <div class="footer-base">© ${ano} Conexus</div>

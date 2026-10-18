@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#070A14">
+    <meta name="description" content="Escolha uma matéria para iniciar a leitura no Conexus.">
+    <title>Matéria · Conexus</title>
+    <link rel="icon" href="../src/img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/componente.css">
+</head>
+<body data-root="../" data-page="catalogo">
+    <div class="app">
+        <div data-include="header"></div>
+        <main class="app">
+            <nav class="breadcrumb" aria-label="Caminho de navegação"><a href="../index.html">Início</a><span aria-hidden="true">›</span><span>Matéria</span></nav>
+            <section class="secao" aria-labelledby="titulo-materia">
+                <div class="cabecalho-secao">
+                    <div>
+                        <h2 id="titulo-materia">Matéria</h2>
+                        <p>Escolha um campo de estudo para começar a leitura.</p>
+                    </div>
+                </div>
+                <div class="filtro-materia" data-filtro-materia role="group" aria-label="Filtrar matéria por área"></div>
+                <div class="grade-card grade-materia" data-grade-materia>
+                    <a class="card" data-card data-categoria="Humanidades" href="./filosofia/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"></circle><path d="M8 9a4 4 0 1 1 6.5 3.1c-1.3 1-2.5 1.4-2.5 3.4"></path></svg></span>
+                        <h3>Filosofia</h3><p>Investigue a realidade, o conhecimento e a existência.</p>
+                        <span class="card-rodape"><span class="card-tag">Humanidades</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="card" data-card data-categoria="Humanidades" href="./sociologia/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="8" r="3"></circle><circle cx="17" cy="9" r="2.5"></circle><path d="M3.5 19a5.5 5.5 0 0 1 11 0m1-4a4 4 0 0 1 5 4"></path></svg></span>
+                        <h3>Sociologia</h3><p>Observe a relação entre pessoa, cultura e sociedade.</p>
+                        <span class="card-rodape"><span class="card-tag">Humanidades</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="card" data-card data-categoria="Ciência natural" href="./fisica/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="2"></circle><ellipse cx="12" cy="12" rx="10" ry="4.5"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"></ellipse></svg></span>
+                        <h3>Física</h3><p>Descreva a matéria, o movimento e a energia.</p>
+                        <span class="card-rodape"><span class="card-tag">Ciência natural</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                    <a class="card" data-card data-categoria="Ciência exata" href="./matematica/index.html">
+                        <span class="card-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h14M5 12h14M5 20h14M8 2v4m8 4v4m-8 4v4"></path></svg></span>
+                        <h3>Matemática</h3><p>Reconheça padrão, quantidade e relação numérica.</p>
+                        <span class="card-rodape"><span class="card-tag">Ciência exata</span><span class="card-seta" aria-hidden="true">→</span></span>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <div data-include="footer"></div>
+    </div>
+    <script src="../src/js/cabecalho.js"></script>
+    <script src="../src/js/rodape.js"></script>
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/navegacao.js"></script>
+</body>
+</html>

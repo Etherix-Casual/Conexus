@@ -1,4 +1,4 @@
-/* Cuida da interação de cartão, curtida e compartilhamento. */
+/* Cuida da interação de cartão, filtro e compartilhamento. */
 (() => {
     // Atualiza a posição do brilho ao mover o ponteiro sobre o cartão.
     document.querySelectorAll("[data-card]").forEach((cartao) => {
@@ -9,64 +9,46 @@
         });
     });
 
-    // Mantém a curtida separada para cada artigo neste navegador.
-    const materia = document.body.dataset.materia;
-    const artigo = document.body.dataset.artigo;
-    if (!materia || !artigo) return;
+    // Cria os filtros a partir da categoria de cada cartão do catálogo.
+    const filtroMateria = document.querySelector("[data-filtro-materia]");
+    const gradeMateria = document.querySelector("[data-grade-materia]");
+    if (filtroMateria && gradeMateria) {
+        const cartoes = [...gradeMateria.querySelectorAll("[data-categoria]")];
+        const categorias = [...new Set(cartoes.map((cartao) => cartao.dataset.categoria).filter(Boolean))];
+        const opcoes = ["Tudo", ...categorias];
 
-    const chaveContagem = `conexus:curtida:${materia}:${artigo}`;
-    const chaveEstado = `conexus:curtida-estado:${materia}:${artigo}`;
-    const botaoCurtir = document.getElementById("botao-curtir");
-    const contador = document.getElementById("contador-curtida");
-    const rotuloCurtir = botaoCurtir?.querySelector("[data-rotulo-curtida]");
-    let contagem = Math.max(0, Number.parseInt(localStorage.getItem(chaveContagem) || "0", 10) || 0);
-    let curtido = localStorage.getItem(chaveEstado) === "true";
+        opcoes.forEach((categoria, indice) => {
+            const botao = document.createElement("button");
+            botao.className = "filtro-materia-botao";
+            botao.type = "button";
+            botao.textContent = categoria;
+            botao.setAttribute("aria-pressed", String(indice === 0));
+            botao.addEventListener("click", () => {
+                cartoes.forEach((cartao) => {
+                    cartao.hidden = indice !== 0 && cartao.dataset.categoria !== categoria;
+                });
+                filtroMateria.querySelectorAll("button").forEach((opcao) => {
+                    opcao.setAttribute("aria-pressed", String(opcao === botao));
+                });
+            });
+            filtroMateria.appendChild(botao);
+        });
+    }
 
-    const atualizarInterfaceCurtida = (total, estado) => {
-        if (!botaoCurtir || !contador || !rotuloCurtir) return;
-        contador.textContent = `${total} pessoa curtiu`;
-        botaoCurtir.classList.toggle("liked", estado);
-        botaoCurtir.setAttribute("aria-pressed", String(estado));
-        botaoCurtir.setAttribute("aria-label", estado ? "Descurtir artigo" : "Curtir artigo");
-        rotuloCurtir.textContent = estado ? "Curtido" : "Curtir";
-    };
-
-    atualizarInterfaceCurtida(contagem, curtido);
-
-    botaoCurtir?.addEventListener("click", () => {
-        curtido = !curtido;
-        contagem = Math.max(0, contagem + (curtido ? 1 : -1));
-        localStorage.setItem(chaveContagem, String(contagem));
-        localStorage.setItem(chaveEstado, String(curtido));
-        atualizarInterfaceCurtida(contagem, curtido);
-        if (typeof botaoCurtir.animate === "function") {
-            botaoCurtir.animate(
-                [{ transform: "scale(1)" }, { transform: "scale(0.92)" }, { transform: "scale(1)" }],
-                { duration: 220, easing: "ease-out" }
-            );
-        }
-    });
-
-    // Compartilha o endereço ou oferece uma cópia como alternativa.
+    // Copia o endereço atual do artigo.
     const botaoCompartilhar = document.getElementById("botao-compartilhar");
     botaoCompartilhar?.addEventListener("click", async () => {
-        const titulo = document.querySelector(".article h2")?.textContent?.trim() || document.title;
         const rotulo = botaoCompartilhar.querySelector("[data-rotulo-compartilhar]");
         const original = rotulo?.textContent || "Compartilhar";
         try {
-            if (navigator.share) {
-                await navigator.share({ title: `Conexus · ${titulo}`, text: `${titulo} — no Conexus.`, url: location.href });
-            } else {
-                await navigator.clipboard.writeText(location.href);
-                if (rotulo) rotulo.textContent = "Link copiado";
-                window.setTimeout(() => {
-                    if (rotulo) rotulo.textContent = original;
-                }, 1600);
-            }
+            await navigator.clipboard.writeText(location.href);
+            if (rotulo) rotulo.textContent = "Link copiado";
+            window.setTimeout(() => {
+                if (rotulo) rotulo.textContent = original;
+            }, 1600);
         } catch (erro) {
-            if (erro instanceof DOMException && erro.name === "AbortError") return;
-            console.error("Não foi possível compartilhar o artigo.", erro);
-            if (rotulo) rotulo.textContent = "Falha ao compartilhar";
+            console.error("Não foi possível copiar o link do artigo.", erro);
+            if (rotulo) rotulo.textContent = "Falha ao copiar link";
             window.setTimeout(() => {
                 if (rotulo) rotulo.textContent = original;
             }, 1600);
